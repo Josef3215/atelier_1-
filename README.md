@@ -1,6 +1,13 @@
 # Projet : Atelier MongoDB Cluster & Replica Set
 
-Ce projet vise à configurer un cluster MongoDB avec un Replica Set et du sharding en utilisant Docker et PowerShell. Il est conçu pour être facilement déployé et utilisé dans un environnement local pour des fins de tests et de développement.
+Ce projet vise à configurer un cluster MongoDB avec un Replica Set et du sharding en utilisant Docker et PowerShell. Il est conçu pour être facilement déployé et utilisé dans un environnement local à des fins de tests et de développement.
+
+Voici l'architecture utilisée dans cette configuration :
+
+![Architecture MongoDB Cluster & Replica Set](./architecteur.jpg)
+
+
+
 
 ## Prérequis
 
