@@ -77,9 +77,9 @@ Avant de commencer, assurez-vous que les outils suivants sont installés et conf
 ```bash
 Set-ExecutionPolicy Restricted
 
+--- 
 
-
-6. **Exécuter le script d'initialisation :**
+5. **Exécuter le script d'initialisation :**
 
    Une fois l'environnement Docker configuré et PowerShell prêt, vous devez exécuter le script `inist.ps1` pour configurer MongoDB, charger les données shardées et initialiser le cluster.
 
