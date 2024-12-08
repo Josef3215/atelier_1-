@@ -69,28 +69,26 @@ Avant de commencer, assurez-vous que les outils suivants sont installés et conf
       ```
 
       Cette commande devrait renvoyer `RemoteSigned`, ce qui signifie que vous pouvez maintenant exécuter des scripts téléchargés.
+      ---
+      **Remarque importante** : Si vous ne souhaitez pas que cette politique soit permanente ou si vous travaillez sur une machine partagée, vous pouvez rétablir la politique d'exécution par défaut après l'exécution des scripts en utilisant la commande :
+      ```bash
+      Set-ExecutionPolicy Restricted 
+      ```
 
 ---
-
-**Remarque importante** : Si vous ne souhaitez pas que cette politique soit permanente ou si vous travaillez sur une machine partagée, vous pouvez rétablir la politique d'exécution par défaut après l'exécution des scripts en utilisant la commande :
-
-```bash
-Set-ExecutionPolicy Restricted
-
---- 
-
-5. **Exécuter le script d'initialisation :**
+  
+ 5. **Exécuter le script d'initialisation**
 
    Une fois l'environnement Docker configuré et PowerShell prêt, vous devez exécuter le script `inist.ps1` pour configurer MongoDB, charger les données shardées et initialiser le cluster.
 
    Pour exécuter le script, ouvrez PowerShell dans le dossier du projet et tapez la commande suivante :
-
    ```bash
    .\inist.ps1
+   ```
 
 Important : Pendant l'exécution du script, il est possible que le service mongos ne soit pas encore prêt à répondre aux requêtes. Si vous rencontrez un problème où le script semble ne pas avancer ou affiche une erreur concernant mongos, il est conseillé d'arrêter le script, de patienter un peu pour que les services soient prêts, puis de relancer le script à partir de la même commande 
 
- 7. **Vérification du Cluster MongoDB**
+ 6. **Vérification du Cluster MongoDB**
 
    Une fois le script d'initialisation exécuté, vous pouvez vérifier si le cluster MongoDB fonctionne correctement en vous connectant à l'instance `mongos` et en effectuant une vérification de la distribution des shards.
 
@@ -101,7 +99,7 @@ Important : Pendant l'exécution du script, il est possible que le service mongo
     docker exec -it mongos mongo
     use atelier1 
     db.table_entropot.getShardDistribution()
-
+   ```
 
 
 
